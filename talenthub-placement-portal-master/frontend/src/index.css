@@ -1,0 +1,65 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root { font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; color: #172b3a; background: #f4f7f8; font-synthesis: none; }
+* { box-sizing: border-box; }
+body { margin: 0; min-width: 320px; background: #f4f7f8; color: #172b3a; }
+button, input, textarea, select { font: inherit; }
+button { transition: transform .16s ease, box-shadow .16s ease, background .16s ease; }
+button:not(:disabled):hover { transform: translateY(-1px); }
+button:focus-visible, input:focus-visible, textarea:focus-visible { outline: 3px solid #a5d8d2; outline-offset: 2px; }
+
+/* TalentHub 2.0 visual system: calm ivory surfaces, deep teal and electric indigo accents. */
+.app-shell { min-height: 100vh; padding: 28px 24px 56px; background: radial-gradient(circle at 8% 0%, #e6f4f1 0, transparent 26rem), #f4f7f8; color: #172b3a; }
+.app-shell main { max-width: 1180px; margin: 0 auto; }
+header.max-w-5xl { max-width: 1180px; margin: 0 auto 30px; padding: 0 0 20px; border-color: #dce6e8 !important; }
+header .text-indigo-400 { color: #087e78 !important; }
+header h1 { letter-spacing: -.045em; }
+header button { background: #e7eeee !important; color: #29424c !important; border: 1px solid #d5e1e3; }
+header button:hover { background: #dce9e8 !important; }
+
+[class~="bg-slate-900"] { background-color: #f7fafb !important; }
+[class~="bg-slate-800"] { background-color: #ffffff !important; }
+[class~="bg-slate-900/50"] { background-color: #edf4f4 !important; }
+[class~="border-slate-700"], [class~="border-slate-800"] { border-color: #dce6e8 !important; }
+[class~="text-slate-100"], [class~="text-slate-200"] { color: #172b3a !important; }
+[class~="text-slate-300"] { color: #405864 !important; }
+[class~="text-slate-400"] { color: #657b84 !important; }
+[class~="text-slate-500"] { color: #82949b !important; }
+[class~="text-indigo-400"], [class~="text-indigo-300"] { color: #087e78 !important; }
+[class~="bg-indigo-600"] { background-color: #087e78 !important; }
+[class~="bg-indigo-600"]:hover, [class~="hover:bg-indigo-500"]:hover { background-color: #066b66 !important; }
+[class~="bg-slate-700"] { background-color: #e9f0f1 !important; color: #29424c !important; }
+[class~="hover:bg-slate-600"]:hover, [class~="hover:bg-slate-700"]:hover { background-color: #dce8e9 !important; }
+[class~="border-slate-700"] { border-color: #dce6e8 !important; }
+
+/* Surface treatment for dashboards and nested content. */
+.app-shell main > div > div, .app-shell main section { border-radius: 18px !important; box-shadow: 0 8px 28px rgba(24, 55, 66, .055); }
+.app-shell main [class*="rounded-lg"] { border-radius: 12px; }
+.app-shell main [class*="rounded-xl"] { border-radius: 18px; }
+.app-shell main input, .app-shell main textarea, .app-shell main select { background: #fbfdfd !important; color: #172b3a !important; border-color: #d5e1e3 !important; }
+.app-shell main input::placeholder, .app-shell main textarea::placeholder { color: #91a1a7; }
+.app-shell main table th { color: #607780 !important; }
+.app-shell main table td { color: #29424c; }
+.app-shell main tr { border-color: #e5edef !important; }
+
+/* Login experience */
+.login-screen { min-height: 100vh; display: flex; align-items: center; justify-content: center; padding: 28px; background: radial-gradient(circle at 15% 20%, #d8eeea 0, transparent 28rem), radial-gradient(circle at 90% 85%, #e6e8fa 0, transparent 25rem), #f4f7f8; color: #172b3a; }
+.login-card { width: min(100%, 460px); padding: 38px; background: rgba(255,255,255,.92); border: 1px solid #dce6e8; border-radius: 24px; box-shadow: 0 24px 70px rgba(24,55,66,.12); }
+.login-card input { background: #f8fbfb !important; color: #172b3a !important; border-color: #d5e1e3 !important; }
+.login-card label { color: #526b75 !important; }
+.login-card .text-indigo-400 { color: #087e78 !important; }
+.login-card .bg-indigo-600 { background: #087e78 !important; }
+.login-card .bg-slate-900 { background: #f3f7f7 !important; }
+.login-card .bg-slate-800 { background: #fff !important; }
+.login-card .border-slate-700 { border-color: #dce6e8 !important; }
+.login-card .text-slate-100, .login-card .text-slate-300 { color: #29424c !important; }
+.login-card .text-slate-400, .login-card .text-slate-500 { color: #71858d !important; }
+
+@media (max-width: 640px) {
+  .app-shell { padding: 18px 14px 36px; }
+  header.max-w-5xl { align-items: flex-start; gap: 14px; flex-wrap: wrap; }
+  .login-card { padding: 26px 22px; }
+  .app-shell main [class*="grid-cols-3"] { grid-template-columns: 1fr !important; }
+}
